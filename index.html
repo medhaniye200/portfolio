@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Medhaniye Kahsay — Portfolio</title>
+  <style>
+  :root {
+    --accent: #2563eb;
+    --bg: white;
+    --card: #e5e7eb; /* light gray */
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  * { box-sizing: border-box }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .container { max-width: 1000px; margin: 48px auto; padding: 24px }
+  header { display: flex; align-items: center; gap: 20px }
+  .avatar { width: 96px; height: 96px; border-radius: 12px; flex: 0 0 96px }
+  h1 { margin: 0; font-size: 28px; color: black }
+  p.lead { margin: 6px 0 18px; color: black }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px }
+  .card {
+    background: var(--card);
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+    color: black;
+  }
+  .btn {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    color: black;
+    background: #f3f4f6;
+  }
+  .btn:hover {
+    background: #d1d5db;
+  }
+  footer { margin-top: 28px; color: black }
+  @media (max-width:520px){ header { flex-direction: column; align-items: flex-start } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img class="avatar" src="M.png" alt="Medhaniye Kahsay" />
+
+      <div>
+        <h1>Medhaniye Kahsay</h1>
+        <p class="lead">
+          Graduate of Computer Science & Engineering, Mekelle University — Mekelle Institute of Technology (2025).  
+          Frontend Developer specializing in React (Next.js) and Vue.
+        </p>
+        <a class="btn" href="#projects">See projects</a>
+        <a class="btn" href="#contact" style="margin-left:8px">Contact</a>
+      </div>
+    </header>
+
+    <section id="projects" style="margin-top:28px">
+      <h2 style="color:var(--accent)">Selected Projects</h2>
+      <div class="grid" style="margin-top:12px">
+
+        <article class="card">
+          <h3>Digital Merkato</h3>
+          <p>Portfolio website for digital merkato technology PLC.</p>
+          <p><strong>Tech:</strong> Next.js · Tailwind</p>
+          <a class="btn" href="https://github.com/medhaniye200/digital-merkato-frontend" target="_blank">Source</a>
+        </article>
+
+        <article class="card">
+          <h3>Digital Receipt Management</h3>
+          <p>A web app to manage and store digital receipts efficiently.</p>
+          <p><strong>Tech:</strong> React · Node.js</p>
+          <a class="btn" href="https://github.com/medhaniye200/custom-receipt-managment" target="_blank">Source</a>
+        </article>
+
+        <article class="card">
+          <h3>Tigray Online Touring System</h3>
+          <p>Mini project built to showcase tourism opportunities in Tigray.</p>
+          <p><strong>Tech:</strong> Vue.js · Firebase</p>
+          <a class="btn" href="https://github.com/medhaniye200/online_touring_system_frontend" target="_blank">Source</a>
+        </article>
+
+        <article class="card">
+          <h3>Link Merkato</h3>
+          <p>A web app providing market links and resources.</p>
+          <p><strong>Tech:</strong> React · Express</p>
+          <a class="btn" href="https://github.com/medhaniye200/ethio-hisab-receipt-management" target="_blank">Source</a>
+        </article>
+
+        <article class="card">
+          <h3>Sheqlee</h3>
+          <p>Online job seeking platform for Ethiopians developed during my internship program.</p>
+          <p><strong>Tech:</strong> Next.js · Tailwind · MongoDB</p>
+          <a class="btn" href="https://github.com/medhaniye200/sheqlee" target="_blank">Source</a>
+        </article>
+
+        <article class="card">
+          <h3>Personal Portfolio</h3>
+          <p>This portfolio site to showcase my skills and projects.</p>
+          <p><strong>Tech:</strong> HTML · CSS · JavaScript</p>
+          <a class="btn" href="https://github.com/yourusername/portfolio" target="_blank">Source</a>
+        </article>
+
+      </div>
+    </section>
+
+    <section style="margin-top:28px">
+      <h2 style="color:var(--accent)">About</h2>
+      <div class="card" style="margin-top:12px">
+        <p>
+          I am a frontend developer passionate about building fast, user-friendly, and accessible web applications.  
+          Skilled in React (Next.js) and Vue frameworks with experience in developing real-world applications for companies and internship programs.  
+          I care about performance, maintainability, and creating intuitive user experiences.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:28px">
+      <h2 style="color:var(--accent)">Contact</h2>
+      <div class="card" style="margin-top:12px">
+        <p>Email: <a href="mailto:medhaniye27@gmail.com">medhaniye27@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/medhaniye-kahsay-20aaa9187/">linkedin.com/in/medhaniye-kahsay</a></p>
+        <p>GitHub: <a href="https://github.com/medhaniye200">github.com/medhaniye200</a></p>
+        <p>phone: +2519 19 04 39 67</p>
+
+      </div>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> Medhaniye Kahsay — Built with ❤️</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear()
+  </script>
+</body>
+</html>
